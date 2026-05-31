@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { FileText, Link as LinkIcon, Video, Image as ImageIcon, ChevronDown } from "lucide-react";
+import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,6 +58,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SiteHeader />
       <div className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-12">
           <p className="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Início</p>

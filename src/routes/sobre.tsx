@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/site-header";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/sobre")({
 function SobrePage() {
   return (
     <div className="min-h-screen bg-background">
+      <SiteHeader />
       <div className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-12">
           <p className="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Sobre</p>
