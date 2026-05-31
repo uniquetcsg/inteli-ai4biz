@@ -29,54 +29,51 @@ function MateriaisPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-3xl px-6 py-12">
-        <header className="mb-8 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
-            <BookOpen className="h-5 w-5 text-accent-foreground" />
+      <div className="mx-auto max-w-5xl px-6 py-16">
+        <header className="mb-12 flex items-center gap-5">
+          <div className="flex h-16 w-16 items-center justify-center bg-primary">
+            <BookOpen className="h-8 w-8 text-accent" />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-foreground">Painel Admin</h1>
-            <p className="text-sm text-muted-foreground">Adicionar materiais ao curso</p>
+            <h1 className="text-4xl font-bold text-foreground md:text-5xl">Adicionar Materiais</h1>
+            <p className="mt-1 text-base text-muted-foreground">
+              Selecione o tópico e o tipo de material
+            </p>
           </div>
         </header>
 
-        <div className="rounded-xl border border-border bg-card p-6">
-          <h2 className="text-base font-semibold text-foreground">Adicionar Materiais</h2>
-          <p className="mb-5 text-sm text-muted-foreground">
-            Selecione o módulo e o tipo de material que deseja adicionar
-          </p>
-
+        <div>
           <form
             onSubmit={(e) => {
               e.preventDefault();
             }}
             className="flex flex-col gap-5"
           >
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-medium text-foreground">Módulo *</label>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-bold uppercase tracking-wide text-foreground">Tópico</label>
               <div className="relative">
                 <select
                   required
                   value={modulo}
                   onChange={(e) => setModulo(e.target.value)}
-                  className="w-full appearance-none rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
+                  className="h-16 w-full appearance-none bg-primary px-6 pr-12 text-lg text-primary-foreground outline-none"
                 >
-                  <option value="">Selecione um módulo</option>
+                  <option value="">Selecione um tópico</option>
                   <option value="1">Tópico IA Aplicada a Negócios</option>
                   <option value="2">Tópico Liderando em Tempos de IA</option>
                 </select>
-                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <ChevronDown className="pointer-events-none absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 text-primary-foreground" />
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-medium text-foreground">Tipo de Material *</label>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-bold uppercase tracking-wide text-foreground">Tipo de Material</label>
               <div className="relative">
-                <ActiveIcon className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-accent" />
+                <ActiveIcon className="pointer-events-none absolute left-6 top-1/2 h-5 w-5 -translate-y-1/2 text-accent" />
                 <select
                   value={tipo}
                   onChange={(e) => setTipo(e.target.value as typeof tipo)}
-                  className="w-full appearance-none rounded-md border border-input bg-background py-2 pl-9 pr-3 text-sm outline-none focus:border-ring"
+                  className="h-16 w-full appearance-none bg-primary pl-14 pr-12 text-lg text-primary-foreground outline-none"
                 >
                   {tipos.map((t) => (
                     <option key={t.value} value={t.value}>
@@ -84,18 +81,18 @@ function MateriaisPage() {
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <ChevronDown className="pointer-events-none absolute right-5 top-1/2 h-5 w-5 -translate-y-1/2 text-primary-foreground" />
               </div>
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-medium text-foreground">Arquivos *</label>
-              <div className="flex flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed border-border bg-background/50 px-6 py-12">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-                  <ActiveIcon className="h-6 w-6 text-accent-foreground" />
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-bold uppercase tracking-wide text-foreground">Arquivos</label>
+              <div className="flex flex-col items-center justify-center gap-4 border-2 border-dashed border-primary bg-card px-6 py-16">
+                <div className="flex h-16 w-16 items-center justify-center bg-accent">
+                  <ActiveIcon className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <p className="text-sm font-medium text-foreground">Arraste e solte arquivos aqui</p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-lg font-bold text-foreground">Arraste e solte arquivos aqui</p>
+                <p className="text-sm text-muted-foreground">
                   ou clique para selecionar múltiplos arquivos
                 </p>
               </div>
@@ -103,7 +100,7 @@ function MateriaisPage() {
 
             <button
               type="submit"
-              className="mt-1 w-full rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-accent-foreground hover:opacity-90"
+              className="h-16 w-full bg-accent px-6 text-lg font-bold uppercase tracking-wide text-accent-foreground hover:opacity-90"
             >
               Adicionar Materiais
             </button>

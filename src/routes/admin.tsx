@@ -21,52 +21,52 @@ const modulos = [
 function AdminPage() {
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-3xl px-6 py-12">
-        <header className="mb-8 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent">
-            <BookOpen className="h-5 w-5 text-accent-foreground" />
+      <div className="mx-auto max-w-5xl px-6 py-16">
+        <header className="mb-12 flex items-center gap-5">
+          <div className="flex h-16 w-16 items-center justify-center bg-primary">
+            <BookOpen className="h-8 w-8 text-accent" />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-foreground">Painel Admin</h1>
-            <p className="text-sm text-muted-foreground">Gerencie seus módulos e materiais</p>
+            <h1 className="text-4xl font-bold text-foreground md:text-5xl">Painel Admin</h1>
+            <p className="mt-1 text-base text-muted-foreground">Gerencie seus tópicos e materiais</p>
           </div>
         </header>
 
-        <div className="mb-6 flex flex-wrap gap-3">
+        <div className="mb-10 grid gap-4 sm:grid-cols-2">
           <Link
             to="/admin/modulos/novo"
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90"
+            className="flex items-center justify-between gap-3 bg-primary px-6 py-5 text-lg font-bold uppercase tracking-wide text-primary-foreground hover:opacity-90"
           >
-            <Plus className="h-4 w-4" />
-            Criar Módulo
+            Criar Tópico
+            <Plus className="h-6 w-6" />
           </Link>
           <Link
             to="/admin/materiais"
-            className="inline-flex items-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-muted"
+            className="flex items-center justify-between gap-3 bg-accent px-6 py-5 text-lg font-bold uppercase tracking-wide text-accent-foreground hover:opacity-90"
           >
-            <Upload className="h-4 w-4" />
             Adicionar Material
+            <Upload className="h-6 w-6" />
           </Link>
         </div>
 
-        <div className="rounded-xl border border-border bg-card">
-          <div className="border-b border-border px-5 py-4">
-            <h2 className="text-base font-semibold text-foreground">Módulos</h2>
-            <p className="text-sm text-muted-foreground">{modulos.length} módulos cadastrados</p>
+        <div className="border-2 border-primary bg-card">
+          <div className="bg-primary px-6 py-5 text-primary-foreground">
+            <h2 className="text-2xl font-bold">Tópicos</h2>
+            <p className="mt-1 text-sm text-primary-foreground/70">{modulos.length} tópicos cadastrados</p>
           </div>
-          <ul className="divide-y divide-border">
+          <ul className="divide-y-2 divide-primary">
             {modulos.map((m) => (
-              <li key={m.title} className="flex items-center justify-between gap-4 px-5 py-4">
+              <li key={m.title} className="flex items-center justify-between gap-4 px-6 py-5">
                 <div>
-                  <p className="text-sm font-medium text-foreground">{m.title}</p>
-                  <p className="text-xs text-muted-foreground">{m.count} materiais</p>
+                  <p className="text-lg font-bold text-foreground">{m.title}</p>
+                  <p className="text-sm text-muted-foreground">{m.count} materiais</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-input text-muted-foreground hover:bg-muted">
-                    <Pencil className="h-4 w-4" />
+                  <button className="inline-flex h-12 w-12 items-center justify-center border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Pencil className="h-5 w-5" />
                   </button>
-                  <button className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-input text-muted-foreground hover:bg-muted">
-                    <Trash2 className="h-4 w-4" />
+                  <button className="inline-flex h-12 w-12 items-center justify-center border-2 border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground">
+                    <Trash2 className="h-5 w-5" />
                   </button>
                 </div>
               </li>

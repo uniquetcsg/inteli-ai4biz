@@ -21,15 +21,15 @@ function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
-      <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 shadow-sm">
-        <div className="mb-6 flex flex-col items-center text-center">
-          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-accent">
-            <BookOpen className="h-6 w-6 text-accent-foreground" />
+      <div className="w-full max-w-2xl">
+        <div className="mb-10 flex items-center gap-5">
+          <div className="flex h-16 w-16 items-center justify-center bg-primary">
+            <BookOpen className="h-8 w-8 text-accent" />
           </div>
-          <h1 className="text-xl font-semibold text-foreground">Login Admin</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Acesse o painel administrativo
-          </p>
+          <div>
+            <h1 className="text-4xl font-bold text-foreground md:text-5xl">Login Admin</h1>
+            <p className="mt-1 text-base text-muted-foreground">Acesse o painel administrativo</p>
+          </div>
         </div>
 
         <form
@@ -37,34 +37,32 @@ function LoginPage() {
             e.preventDefault();
             navigate({ to: "/admin" });
           }}
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-5"
         >
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-foreground">Email *</label>
+          <div className="flex items-stretch">
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@exemplo.com"
-              className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
+              placeholder="Digite seu e-mail"
+              className="h-16 w-full bg-primary px-6 text-lg text-primary-foreground placeholder:text-primary-foreground/60 outline-none"
             />
           </div>
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-foreground">Senha *</label>
+          <div className="flex items-stretch">
             <input
               type="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-              className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
+              placeholder="Digite sua senha"
+              className="h-16 w-full bg-primary px-6 text-lg text-primary-foreground placeholder:text-primary-foreground/60 outline-none"
             />
           </div>
 
           <button
             type="submit"
-            className="mt-2 w-full rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="h-16 w-full bg-accent px-6 text-lg font-bold uppercase tracking-wide text-accent-foreground transition-opacity hover:opacity-90"
           >
             Entrar
           </button>
