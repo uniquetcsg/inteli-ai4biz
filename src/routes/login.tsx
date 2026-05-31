@@ -4,9 +4,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Login Admin — Plataforma de Cursos" },
+      { title: "Login Admin — AI FOR BUSINESS" },
       { name: "description", content: "Acesso restrito ao painel administrativo." },
-      { property: "og:title", content: "Login Admin — Plataforma de Cursos" },
+      { property: "og:title", content: "Login Admin — AI FOR BUSINESS" },
       { property: "og:description", content: "Acesso restrito ao painel administrativo." },
     ],
   }),

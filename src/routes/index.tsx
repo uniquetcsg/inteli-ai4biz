@@ -5,9 +5,9 @@ import { FileText, Link as LinkIcon, Video, Image as ImageIcon, ChevronDown } fr
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plataforma de Cursos — Visão Aluno" },
+      { title: "AI FOR BUSINESS | TANCI SIMÕES" },
       { name: "description", content: "Acesse os materiais dos módulos do curso." },
-      { property: "og:title", content: "Plataforma de Cursos — Visão Aluno" },
+      { property: "og:title", content: "AI FOR BUSINESS | TANCI SIMÕES" },
       { property: "og:description", content: "Acesse os materiais dos módulos do curso." },
     ],
   }),
@@ -60,8 +60,8 @@ function Index() {
       <div className="mx-auto max-w-5xl px-6 py-16">
         <div className="mb-12">
           <p className="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Início</p>
-          <h1 className="text-4xl font-bold text-foreground md:text-5xl">Plataforma de Cursos</h1>
-          <p className="mt-2 text-base text-muted-foreground">Materiais e recursos dos tópicos</p>
+          <h1 className="text-4xl font-bold text-foreground md:text-5xl">AI FOR BUSINESS | TANCI SIMÕES</h1>
+          <p className="mt-2 text-base text-muted-foreground">Materiais complementares sugeridos por Tanci Simões</p>
         </div>
 
         <div className="flex flex-col gap-6">

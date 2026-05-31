@@ -4,9 +4,9 @@ import { Plus, Upload, Pencil, Trash2 } from "lucide-react";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Painel Admin — Plataforma de Cursos" },
+      { title: "Painel Admin — AI FOR BUSINESS" },
       { name: "description", content: "Gerencie módulos e materiais do curso." },
-      { property: "og:title", content: "Painel Admin — Plataforma de Cursos" },
+      { property: "og:title", content: "Painel Admin — AI FOR BUSINESS" },
       { property: "og:description", content: "Gerencie módulos e materiais do curso." },
     ],
   }),

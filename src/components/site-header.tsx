@@ -10,7 +10,7 @@ export function SiteHeader() {
             <BookOpen className="h-6 w-6 text-accent" />
           </div>
           <span className="hidden text-lg font-bold uppercase tracking-wide text-foreground sm:inline">
-            Plataforma de Cursos
+            AI FOR BUSINESS
           </span>
         </Link>
         <nav className="flex items-stretch gap-2">
