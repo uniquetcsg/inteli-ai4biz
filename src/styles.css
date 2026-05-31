@@ -62,7 +62,7 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0rem;
   /* Inteli Exec — base palette */
   --c-roxo: #2e2640;
   --c-coral: #ff4545;
@@ -71,6 +71,7 @@
   --c-cinza-med: #caced6;
   --c-cinza-claro: #e6eaeb;
   --c-branco: #ffffff;
+  --c-amarelo: #e8ff3a;
 
   /* Semantic mapping */
   --background: #e6eaeb;
@@ -85,13 +86,13 @@
   --secondary-foreground: #2e2640;
   --muted: #e6eaeb;
   --muted-foreground: #6b6f78;
-  --accent: #066d73;
-  --accent-foreground: #ffffff;
+  --accent: #e8ff3a;
+  --accent-foreground: #2e2640;
   --destructive: #ff4545;
   --destructive-foreground: #ffffff;
-  --border: #caced6;
-  --input: #caced6;
-  --ring: #066d73;
+  --border: #2e2640;
+  --input: #2e2640;
+  --ring: #e8ff3a;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
