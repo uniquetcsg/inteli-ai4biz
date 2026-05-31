@@ -62,8 +62,8 @@ function MateriaisPage() {
                   className="w-full appearance-none rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:border-ring"
                 >
                   <option value="">Selecione um módulo</option>
-                  <option value="1">Módulo 1: IA Aplicada a Negócios</option>
-                  <option value="2">Módulo 2: Liderando em Tempos de IA</option>
+                  <option value="1">Tópico IA Aplicada a Negócios</option>
+                  <option value="2">Tópico Liderando em Tempos de IA</option>
                 </select>
                 <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               </div>

@@ -14,8 +14,8 @@ export const Route = createFileRoute("/admin")({
 });
 
 const modulos = [
-  { title: "Módulo 1: IA Aplicada a Negócios", count: 4 },
-  { title: "Módulo 2: Liderando em Tempos de IA", count: 3 },
+  { title: "Tópico IA Aplicada a Negócios", count: 4 },
+  { title: "Tópico Liderando em Tempos de IA", count: 3 },
 ];
 
 function AdminPage() {
