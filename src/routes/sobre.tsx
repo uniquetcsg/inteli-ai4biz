@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre — Plataforma de Cursos" },
+      { title: "Sobre — AI FOR BUSINESS" },
       { name: "description", content: "Conheça o autor por trás da plataforma de cursos." },
-      { property: "og:title", content: "Sobre — Plataforma de Cursos" },
+      { property: "og:title", content: "Sobre — AI FOR BUSINESS" },
       { property: "og:description", content: "Conheça o autor por trás da plataforma de cursos." },
     ],
   }),
