@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminMateriaisRouteImport } from './routes/admin.materiais'
 import { Route as AdminModulosNovoRouteImport } from './routes/admin.modulos.novo'
 
 const LoginRoute = LoginRouteImport.update({
@@ -29,6 +30,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminMateriaisRoute = AdminMateriaisRouteImport.update({
+  id: '/materiais',
+  path: '/materiais',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminModulosNovoRoute = AdminModulosNovoRouteImport.update({
   id: '/modulos/novo',
   path: '/modulos/novo',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
   '/admin/modulos/novo': typeof AdminModulosNovoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
   '/admin/modulos/novo': typeof AdminModulosNovoRoute
 }
 export interface FileRoutesById {
@@ -52,14 +60,26 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/admin': typeof AdminRouteWithChildren
   '/login': typeof LoginRoute
+  '/admin/materiais': typeof AdminMateriaisRoute
   '/admin/modulos/novo': typeof AdminModulosNovoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/admin' | '/login' | '/admin/modulos/novo'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/login'
+    | '/admin/materiais'
+    | '/admin/modulos/novo'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/admin' | '/login' | '/admin/modulos/novo'
-  id: '__root__' | '/' | '/admin' | '/login' | '/admin/modulos/novo'
+  to: '/' | '/admin' | '/login' | '/admin/materiais' | '/admin/modulos/novo'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/login'
+    | '/admin/materiais'
+    | '/admin/modulos/novo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -91,6 +111,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/materiais': {
+      id: '/admin/materiais'
+      path: '/materiais'
+      fullPath: '/admin/materiais'
+      preLoaderRoute: typeof AdminMateriaisRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/modulos/novo': {
       id: '/admin/modulos/novo'
       path: '/modulos/novo'
@@ -102,10 +129,12 @@ declare module '@tanstack/react-router' {
 }
 
 interface AdminRouteChildren {
+  AdminMateriaisRoute: typeof AdminMateriaisRoute
   AdminModulosNovoRoute: typeof AdminModulosNovoRoute
 }
 
 const AdminRouteChildren: AdminRouteChildren = {
+  AdminMateriaisRoute: AdminMateriaisRoute,
   AdminModulosNovoRoute: AdminModulosNovoRoute,
 }
 
