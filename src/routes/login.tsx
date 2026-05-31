@@ -1,5 +1,4 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { BookOpen } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/login")({
@@ -20,16 +19,12 @@ function LoginPage() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-6">
-      <div className="w-full max-w-2xl">
-        <div className="mb-10 flex items-center gap-5">
-          <div className="flex h-16 w-16 items-center justify-center bg-primary">
-            <BookOpen className="h-8 w-8 text-accent" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold text-foreground md:text-5xl">Login Admin</h1>
-            <p className="mt-1 text-base text-muted-foreground">Acesse o painel administrativo</p>
-          </div>
+    <div className="min-h-screen bg-background px-6 py-16">
+      <div className="mx-auto w-full max-w-2xl">
+        <div className="mb-10">
+          <p className="mb-3 text-sm font-bold uppercase tracking-widest text-accent">Acesso</p>
+          <h1 className="text-4xl font-bold text-foreground md:text-5xl">Login Admin</h1>
+          <p className="mt-2 text-base text-muted-foreground">Acesse o painel administrativo</p>
         </div>
 
         <form
@@ -62,7 +57,7 @@ function LoginPage() {
 
           <button
             type="submit"
-            className="h-16 w-full bg-accent px-6 text-lg font-bold uppercase tracking-wide text-accent-foreground transition-opacity hover:opacity-90"
+            className="h-16 w-full bg-segment px-6 text-lg font-bold uppercase tracking-wide text-segment-foreground transition-opacity hover:opacity-90"
           >
             Entrar
           </button>
