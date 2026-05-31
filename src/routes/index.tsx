@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { BookOpen, FileText, Link as LinkIcon, Video, Image as ImageIcon, ChevronDown } from "lucide-react";
+import { FileText, Link as LinkIcon, Video, Image as ImageIcon, ChevronDown } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
