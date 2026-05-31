@@ -40,6 +40,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-segment: var(--segment);
+  --color-segment-foreground: var(--segment-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -66,12 +68,13 @@
   /* Inteli Exec — base palette */
   --c-roxo: #2e2640;
   --c-coral: #ff4545;
+  --c-lilas: #90a5e5;
+  --c-verde: #89cea5;
   --c-verde-esc: #066d73;
-  --c-cinza-esc: #6b6f78;
+  --c-cinza-esc: #b2b6bf;
   --c-cinza-med: #caced6;
   --c-cinza-claro: #e6eaeb;
   --c-branco: #ffffff;
-  --c-amarelo: #e8ff3a;
 
   /* Semantic mapping */
   --background: #e6eaeb;
@@ -86,13 +89,15 @@
   --secondary-foreground: #2e2640;
   --muted: #e6eaeb;
   --muted-foreground: #6b6f78;
-  --accent: #e8ff3a;
-  --accent-foreground: #2e2640;
+  --accent: #ff4545;
+  --accent-foreground: #ffffff;
+  --segment: #066d73;
+  --segment-foreground: #ffffff;
   --destructive: #ff4545;
   --destructive-foreground: #ffffff;
-  --border: #2e2640;
-  --input: #2e2640;
-  --ring: #e8ff3a;
+  --border: #caced6;
+  --input: #caced6;
+  --ring: #066d73;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
