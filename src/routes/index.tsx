@@ -18,7 +18,7 @@ type Material = { type: "pdf" | "link" | "video" | "image"; title: string };
 
 const modulos: { title: string; description: string; materials: Material[] }[] = [
   {
-    title: "Módulo 1: IA Aplicada a Negócios",
+    title: "Tópico IA Aplicada a Negócios",
     description: "Fundamentos práticos de IA para tomada de decisão.",
     materials: [
       { type: "pdf", title: "Apostila — IA aplicada a negócios.pdf" },
@@ -28,7 +28,7 @@ const modulos: { title: string; description: string; materials: Material[] }[] =
     ],
   },
   {
-    title: "Módulo 2: Liderando em Tempos de IA",
+    title: "Tópico Liderando em Tempos de IA",
     description: "Como liderar equipes e projetos em um mundo com IA.",
     materials: [
       { type: "pdf", title: "Guia do líder — Era da IA.pdf" },
